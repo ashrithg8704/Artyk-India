@@ -1,0 +1,71 @@
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+* {
+  cursor: none;
+}
+
+html,
+body {
+  background-color: #f7f4f0;
+  color: #1a1614;
+  min-height: 100%;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body {
+  font-family: var(--font-sans), sans-serif;
+  letter-spacing: 0.015em;
+  line-height: 1.65;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.hero-display {
+  font-size: clamp(3.5rem, 7vw, 6rem);
+  line-height: 1.04;
+}
+
+.underline-sweep {
+  position: relative;
+}
+
+.underline-sweep::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.35rem;
+  width: 100%;
+  height: 1px;
+  background: #b8944e;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.underline-sweep:hover::after {
+  transform: scaleX(1);
+}
+
+.brand-marquee {
+  animation: marquee 24s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (hover: none) {
+  * {
+    cursor: auto;
+  }
+}
