@@ -16,6 +16,27 @@ npm install
 npm run dev
 ```
 
+## Git LFS (Required For Intro Video)
+
+This repository stores the intro video using Git LFS.
+
+If this is your first clone setup on a machine:
+
+```bash
+brew install git-lfs
+git lfs install
+```
+
+After cloning (or when pulling new media changes):
+
+```bash
+git lfs pull
+```
+
+Current LFS-tracked media:
+
+- `public/videos/artyk-intro.mp4`
+
 ## Sanity CMS Setup
 
 This repo uses a dedicated Sanity Studio inside `sanity/` and a frontend client layer in `src/lib/sanity`.
