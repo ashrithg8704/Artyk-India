@@ -2,11 +2,11 @@ import { ContactMap } from "@/components/sections/ContactMap";
 
 export default function ContactPage() {
   return (
-    <section className="bg-onyx px-6 pb-20 pt-32 text-ivory">
-      <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-2">
+    <section className="bg-onyx px-6 pb-14 pt-8 text-ivory md:pb-20 md:pt-14">
+      <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-2 md:gap-10">
         <ContactMap />
         <div>
-          <h1 className="font-display text-5xl italic">Visit & Enquire</h1>
+          <h1 className="font-display text-4xl italic leading-none md:text-5xl">Visit & Enquire</h1>
           <form className="mt-8 space-y-4">
             <input className="w-full border border-cognac bg-transparent px-4 py-3 text-sm text-ivory placeholder:text-greige/80" placeholder="Name" />
             <input className="w-full border border-cognac bg-transparent px-4 py-3 text-sm text-ivory placeholder:text-greige/80" placeholder="Email" type="email" />

@@ -25,6 +25,7 @@
 *.pem
 .cursor/
 .npm-cache/
+public/videos/*.mp4
 
 # debug
 npm-debug.log*

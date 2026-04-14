@@ -1,23 +1,22 @@
 import type { Metadata } from "next";
-import { Jost, Playfair_Display } from "next/font/google";
+import { Cormorant_Garamond, Manrope } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { CustomCursor } from "@/components/ui/CustomCursor";
 import { PageTransition } from "@/components/ui/PageTransition";
-import { DevelopmentNotice } from "@/components/ui/DevelopmentNotice";
+import { CustomCursor } from "@/components/ui/CustomCursor";
 
-const playfair = Playfair_Display({
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   style: ["normal", "italic"],
-  weight: ["400"],
+  weight: ["400", "500", "600"],
   variable: "--font-display",
   display: "swap",
 });
 
-const jost = Jost({
+const manrope = Manrope({
   subsets: ["latin"],
-  weight: ["200", "300", "400"],
+  weight: ["300", "400", "500", "600"],
   variable: "--font-sans",
   display: "swap",
 });
@@ -38,13 +37,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${playfair.variable} ${jost.variable}`}>
-      <body className="bg-ivory text-onyx">
+    <html lang="en" className={`${cormorant.variable} ${manrope.variable}`}>
+      <body className="bg-ivory text-onyx antialiased">
         <Header />
-        <div className="mt-20">
-          <DevelopmentNotice />
-        </div>
-        <PageTransition>{children}</PageTransition>
+        <PageTransition>
+          <main className="pt-24 md:pt-28">{children}</main>
+        </PageTransition>
         <Footer />
         <CustomCursor />
       </body>
