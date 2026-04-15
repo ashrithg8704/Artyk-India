@@ -27,6 +27,8 @@
 .npm-cache/
 public/videos/*.mp4
 !public/videos/artyk-intro.mp4
+!public/videos/artyk-intro-desktop.mp4
+!public/videos/artyk-intro-mobile.mp4
 
 # debug
 npm-debug.log*

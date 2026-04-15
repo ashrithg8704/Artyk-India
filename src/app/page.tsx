@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { HomeScrollExperience } from "@/components/sections/HomeScrollExperience";
+import { HeroIntroMedia } from "@/components/sections/HeroIntroMedia";
 import { getHomepageData } from "@/lib/sanity";
 import { urlForImage } from "@/lib/sanity/image";
 import { sampleImages } from "@/lib/sampleImages";
@@ -57,17 +58,7 @@ export default async function HomePage() {
   return (
     <>
       <section className="grain relative mx-4 min-h-[82vh] overflow-hidden rounded-[2.2rem] bg-[#201813] text-[#f5ede5] md:mx-8 md:min-h-[88vh]">
-        <video
-          className="absolute inset-0 h-full w-full object-cover"
-          src="/videos/artyk-intro.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          poster={heroImage}
-        />
-        <Image src={heroImage} alt="Artyk experience centre" fill sizes="100vw" className="object-cover opacity-0" priority />
+        <HeroIntroMedia fallbackPoster={heroImage} />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-black/20" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/0" />
 
