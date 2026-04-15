@@ -15,18 +15,6 @@ export function HeroIntroMedia({ fallbackPoster }: Props) {
   const [posterSrc, setPosterSrc] = useState(fallbackPoster);
 
   useEffect(() => {
-    const media = window.matchMedia("(max-width: 768px)");
-    const updateSource = () => {
-      setVideoSrc(media.matches ? "/videos/artyk-intro-mobile.mp4" : "/videos/artyk-intro-desktop.mp4");
-    };
-
-    updateSource();
-    media.addEventListener("change", updateSource);
-
-    return () => media.removeEventListener("change", updateSource);
-  }, []);
-
-  useEffect(() => {
     setVideoReady(false);
     setForceReveal(false);
 
